@@ -5,5 +5,7 @@
   <%= @tweet.tweet %>
 </p>
 
+<% if @tweet.user.username == current_user.username %>
 <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
+<% end %>
 <%= link_to 'Back', tweets_path %>
